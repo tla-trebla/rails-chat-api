@@ -46,4 +46,6 @@ Rails.application.configure do
   ]
   
   config.action_cable.url = 'wss://rails-chat-api-production.up.railway.app/cable'
+
+  config.hosts.clear
 end
