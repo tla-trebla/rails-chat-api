@@ -9,10 +9,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL", "redis://default:NZJvqWcsiaDwHcIOHqzweJhHneNwvEaH@redis.railway.internal:6379") %>
+  url: <%= ENV.fetch("REDIS_URL") %>
   channel_prefix: rails_chat_api_production
-  connects_to:
-    database:
-      writing: cable
-  polling_interval: 0.1.seconds
-  message_retention: 1.day

@@ -46,6 +46,9 @@ Rails.application.configure do
   ]
   
   config.action_cable.url = 'wss://rails-chat-api-production.up.railway.app/cable'
+  
+  config.action_cable.mount_path = '/cable'
+  config.action_cable.disable_request_forgery_protection = true
 
   config.hosts.clear
 end
