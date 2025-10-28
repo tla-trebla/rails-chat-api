@@ -8,7 +8,9 @@ test:
   adapter: test
 
 production:
-  adapter: async
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL", "redis://default:NZJvqWcsiaDwHcIOHqzweJhHneNwvEaH@redis.railway.internal:6379") %>
+  channel_prefix: rails_chat_api_production
   connects_to:
     database:
       writing: cable
