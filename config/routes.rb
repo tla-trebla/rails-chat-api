@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
+  root to: proc { [200, {}, ['Hello from Rails on Railway!']] }
 end
